@@ -1,29 +1,12 @@
-/*
-function countdown() {
-  var seconds = document.getElementById("seconds").value;
 
-  function tick() {
-    if (seconds == 0) {
-      alert("Time's up!");
-    } else {
-      seconds = seconds - 1;
-      timer.innerHTML = seconds;
-      setTimeout(tick, 1000);
-    }
-  }
-  tick();
-}*/
-// Code above is for the COUNTDOWN; code below is for the SLIDESHOW
 
 var slideIndex = 0;
-showSlides(); // console TypeError re: this line (and line 65)
+showSlides();
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
@@ -64,5 +47,5 @@ function showSlides() {
   }
   slides[slideIndex - 1].style.display = "block"; // console TypeError re: this line (and line 19)
   dots[slideIndex - 1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
